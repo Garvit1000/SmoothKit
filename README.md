@@ -1,15 +1,22 @@
 # SmoothKit
 
+[![npm version](https://img.shields.io/npm/v/smoothkit.svg)](https://www.npmjs.com/package/smoothkit)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+
+![SmoothKit Hero](./public/hero.jpeg)
+
 Dead-simple React hooks for smooth animations. Bridge the gap between basic CSS transitions and full animation libraries for 80% of common use cases.
 
 ##  Features
 
--  **5 Polished Hooks**: Smooth scrolling, reveals, typing effects, counters, and transitions
+-  **9 Polished Hooks**: Smooth scrolling, reveals, typing effects, counters, transitions, and more
 -  **Lightweight**: < 10kb gzipped, tree-shakeable
 -  **Accessible**: Respects `prefers-reduced-motion`
 -  **TypeScript**: Full type safety with IntelliSense
 -  **60fps**: Optimized with RequestAnimationFrame
 -  **Zero Config**: Sensible defaults, all options optional
+-  **Zero Dependencies**: Only React 18+ as peer dependency
 
 ##  Quick Start
 

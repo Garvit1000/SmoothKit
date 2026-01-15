@@ -1,0 +1,30 @@
+# Source files (we ship compiled dist/ instead)
+lib/
+tsconfig.build.json
+
+# Demo site and Next.js files
+app/
+public/
+next.config.ts
+next-env.d.ts
+postcss.config.mjs
+components.json
+
+# Development files
+.next/
+node_modules/
+.git/
+.gitignore
+
+# Config files
+tsconfig.json
+eslint.config.mjs
+
+# Documentation (keep README.md)
+*.log
+
+# Only include in package:
+# - dist/
+# - README.md
+# - LICENSE
+# - package.json
