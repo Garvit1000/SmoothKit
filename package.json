@@ -2,7 +2,10 @@
   "name": "smoothkit",
   "version": "1.0.0",
   "description": "Dead-simple React hooks for smooth animations. Bridge the gap between basic CSS transitions and full animation libraries.",
-  "author": "Garvit",
+  "author": {
+    "name": "Garvit",
+    "url": "https://github.com/Garvit1000"
+  },
   "license": "MIT",
   "keywords": [
     "react",

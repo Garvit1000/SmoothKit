@@ -193,8 +193,14 @@ SmoothKit is designed to be lightweight and tree-shakeable:
 
 ##  License
 
-MIT © SmoothKit
+MIT © [Garvit](https://github.com/Garvit1000)
 
 ---
+
+## Links
+
+- **GitHub**: [github.com/Garvit1000/SmoothKit](https://github.com/Garvit1000/SmoothKit)
+- **Twitter**: [@Garvit1000](https://x.com/Garvit1000)
+- **npm**: [npmjs.com/package/smoothkit](https://www.npmjs.com/package/smoothkit)
 
 Built with ❤️ for the React community
