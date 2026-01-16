@@ -93,10 +93,10 @@ export function Accordion() {
     }, []);
 
     return (
-        <div className="max-w-3xl space-y-12">
+        <div className="max-w-3xl space-y-8 md:space-y-12">
             <div>
-                <h1 className="text-3xl font-bold tracking-tight text-white mb-2">Smooth Transition</h1>
-                <p className="text-lg text-white/60 leading-relaxed">
+                <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-2">Smooth Transition</h1>
+                <p className="text-base md:text-lg text-white/60 leading-relaxed">
                     Animate height and width to 'auto' automatically. Solves the classic CSS animation limitation.
                 </p>
             </div>
@@ -127,12 +127,12 @@ export function Accordion() {
 
                 <div className="border border-white/[0.08] rounded-xl overflow-hidden bg-[#0a0a0a]">
                     {activeTab === 'preview' ? (
-                        <div className="h-[450px] flex items-center justify-center relative bg-black/50 overflow-hidden">
+                        <div className="min-h-[300px] md:h-[450px] flex items-center justify-center relative bg-black/50 overflow-hidden">
                             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/[0.03] via-transparent to-transparent pointer-events-none" />
                             <TransitionDemo />
                         </div>
                     ) : (
-                        <div className="h-[450px] overflow-auto custom-scrollbar bg-[#050505] p-4 text-sm font-mono">
+                        <div className="min-h-[300px] md:h-[450px] overflow-auto custom-scrollbar bg-[#050505] p-3 md:p-4 text-xs md:text-sm font-mono">
                             <div dangerouslySetInnerHTML={{ __html: codeHtml }} />
                         </div>
                     )}
@@ -158,69 +158,71 @@ export function Accordion() {
             </div>
 
             <div id="api" className="scroll-mt-20">
-                <h2 className="text-xl font-semibold text-white mb-6 tracking-tight">API Reference</h2>
+                <h2 className="text-lg md:text-xl font-semibold text-white mb-4 md:mb-6 tracking-tight">API Reference</h2>
                 <div className="overflow-hidden border border-white/[0.08] rounded-xl bg-[#0a0a0a]">
-                    <div className="overflow-x-auto">
-                        <table className="w-full text-sm text-left border-collapse">
-                            <thead className="text-xs text-white/50 uppercase bg-white/[0.02] border-b border-white/[0.08]">
-                                <tr>
-                                    <th className="px-6 py-4 font-medium w-1/4">Property</th>
-                                    <th className="px-6 py-4 font-medium w-1/4">Type</th>
-                                    <th className="px-6 py-4 font-medium w-1/4">Default</th>
-                                    <th className="px-6 py-4 font-medium w-1/4">Description</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-white/[0.08]">
-                                <tr className="group hover:bg-white/[0.02] transition-colors">
-                                    <td className="px-6 py-4">
-                                        <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06] font-mono">
-                                            duration
-                                        </span>
-                                    </td>
-                                    <td className="px-6 py-4 font-mono text-[#00ff88] text-xs">number</td>
-                                    <td className="px-6 py-4">
-                                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-[#ffffff05] text-white/40 font-mono">
-                                            300
-                                        </span>
-                                    </td>
-                                    <td className="px-6 py-4 text-white/70 leading-relaxed">
-                                        Transition duration in ms.
-                                    </td>
-                                </tr>
-                                <tr className="group hover:bg-white/[0.02] transition-colors">
-                                    <td className="px-6 py-4">
-                                        <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06] font-mono">
-                                            property
-                                        </span>
-                                    </td>
-                                    <td className="px-6 py-4 font-mono text-[#00ff88] text-xs">string</td>
-                                    <td className="px-6 py-4">
-                                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-[#ffffff05] text-white/40 font-mono">
-                                            'height'
-                                        </span>
-                                    </td>
-                                    <td className="px-6 py-4 text-white/70 leading-relaxed">
-                                        Property to animate ('height', 'width', or 'both').
-                                    </td>
-                                </tr>
-                                <tr className="group hover:bg-white/[0.02] transition-colors">
-                                    <td className="px-6 py-4">
-                                        <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06] font-mono">
-                                            easing
-                                        </span>
-                                    </td>
-                                    <td className="px-6 py-4 font-mono text-[#00ff88] text-xs">string</td>
-                                    <td className="px-6 py-4">
-                                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-[#ffffff05] text-white/40 font-mono">
-                                            'cubic-bezier(0.16, 1, 0.3, 1)'
-                                        </span>
-                                    </td>
-                                    <td className="px-6 py-4 text-white/70 leading-relaxed">
-                                        CSS easing function.
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div className="overflow-x-auto -mx-4 md:mx-0">
+                        <div className="inline-block min-w-full align-middle px-4 md:px-0">
+                            <table className="w-full text-xs md:text-sm text-left border-collapse">
+                                <thead className="text-[10px] md:text-xs text-white/50 uppercase bg-white/[0.02] border-b border-white/[0.08]">
+                                    <tr>
+                                        <th className="px-3 md:px-6 py-3 md:py-4 font-medium whitespace-nowrap">Property</th>
+                                        <th className="px-3 md:px-6 py-3 md:py-4 font-medium whitespace-nowrap">Type</th>
+                                        <th className="px-3 md:px-6 py-3 md:py-4 font-medium whitespace-nowrap">Default</th>
+                                        <th className="px-3 md:px-6 py-3 md:py-4 font-medium">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-white/[0.08]">
+                                    <tr className="group hover:bg-white/[0.02] transition-colors">
+                                        <td className="px-3 md:px-6 py-3 md:py-4">
+                                            <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06] font-mono">
+                                                duration
+                                            </span>
+                                        </td>
+                                        <td className="px-3 md:px-6 py-3 md:py-4 font-mono text-[#00ff88] text-[10px] md:text-xs whitespace-nowrap">number</td>
+                                        <td className="px-3 md:px-6 py-3 md:py-4">
+                                            <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-[#ffffff05] text-white/40 font-mono">
+                                                300
+                                            </span>
+                                        </td>
+                                        <td className="px-3 md:px-6 py-3 md:py-4 text-white/70 leading-relaxed">
+                                            Transition duration in ms.
+                                        </td>
+                                    </tr>
+                                    <tr className="group hover:bg-white/[0.02] transition-colors">
+                                        <td className="px-3 md:px-6 py-3 md:py-4">
+                                            <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06] font-mono">
+                                                property
+                                            </span>
+                                        </td>
+                                        <td className="px-3 md:px-6 py-3 md:py-4 font-mono text-[#00ff88] text-[10px] md:text-xs whitespace-nowrap">string</td>
+                                        <td className="px-3 md:px-6 py-3 md:py-4">
+                                            <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-[#ffffff05] text-white/40 font-mono">
+                                                'height'
+                                            </span>
+                                        </td>
+                                        <td className="px-3 md:px-6 py-3 md:py-4 text-white/70 leading-relaxed">
+                                            Property to animate ('height', 'width', or 'both').
+                                        </td>
+                                    </tr>
+                                    <tr className="group hover:bg-white/[0.02] transition-colors">
+                                        <td className="px-3 md:px-6 py-3 md:py-4">
+                                            <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06] font-mono">
+                                                easing
+                                            </span>
+                                        </td>
+                                        <td className="px-3 md:px-6 py-3 md:py-4 font-mono text-[#00ff88] text-[10px] md:text-xs whitespace-nowrap">string</td>
+                                        <td className="px-3 md:px-6 py-3 md:py-4">
+                                            <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-[#ffffff05] text-white/40 font-mono">
+                                                'cubic-bezier(0.16, 1, 0.3, 1)'
+                                            </span>
+                                        </td>
+                                        <td className="px-3 md:px-6 py-3 md:py-4 text-white/70 leading-relaxed">
+                                            CSS easing function.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

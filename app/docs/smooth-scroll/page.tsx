@@ -74,18 +74,18 @@ export function Navigation() {
     }, []);
 
     return (
-        <div className="max-w-3xl space-y-12">
+        <div className="max-w-3xl space-y-8 md:space-y-12">
             {/* Title Section */}
             <div>
-                <h1 className="text-3xl font-bold tracking-tight text-white mb-2">Smooth Scroll</h1>
-                <p className="text-lg text-white/60 leading-relaxed">
+                <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-2">Smooth Scroll</h1>
+                <p className="text-base md:text-lg text-white/60 leading-relaxed">
                     Programmatic smooth scrolling with advanced easing, offset control, and automatic reduced-motion support.
                 </p>
             </div>
 
             {/* Component Preview */}
             <div className="space-y-4">
-                <div className="flex items-center justify-between border-b border-white/[0.08]">
+                <div className="flex items-center justify-between border-b border-white/8">
                     <div className="flex items-center gap-4 text-sm font-medium">
                         <button
                             onClick={() => setActiveTab('preview')}
@@ -108,23 +108,23 @@ export function Navigation() {
                     </div>
                 </div>
 
-                <div className="border border-white/[0.08] rounded-xl overflow-hidden bg-[#0a0a0a]">
+                <div className="border border-white/8 rounded-xl overflow-hidden bg-[#0a0a0a]">
                     {activeTab === 'preview' ? (
-                        <div className="h-[350px] flex items-center justify-center relative bg-black/50 p-8">
-                            <div className="text-center space-y-6">
-                                <p className="text-white/40 text-sm max-w-sm mx-auto">
+                        <div className="min-h-75 md:h-87.5 flex items-center justify-center relative bg-black/50 p-4 md:p-8">
+                            <div className="text-center space-y-4 md:space-y-6">
+                                <p className="text-white/40 text-xs md:text-sm max-w-sm mx-auto">
                                     Click the button below to experience buttery smooth scrolling to the bottom of this page.
                                 </p>
                                 <button
                                     onClick={() => scrollTo('#bottom')}
-                                    className="px-6 py-3 bg-white text-black rounded-lg text-sm font-medium hover:bg-white/90 transition-colors flex items-center gap-2 mx-auto"
+                                    className="px-4 md:px-6 py-2.5 md:py-3 bg-white text-black rounded-lg text-xs md:text-sm font-medium hover:bg-white/90 transition-colors flex items-center gap-2 mx-auto"
                                 >
                                     Scroll to Bottom <ArrowDown className="w-4 h-4" />
                                 </button>
                             </div>
                         </div>
                     ) : (
-                        <div className="h-[350px] overflow-auto custom-scrollbar bg-[#050505] p-4 text-sm font-mono">
+                        <div className="min-h-75 md:h-87.5 overflow-auto custom-scrollbar bg-[#050505] p-3 md:p-4 text-xs md:text-sm font-mono">
                             <div dangerouslySetInnerHTML={{ __html: basicCodeHtml }} />
                         </div>
                     )}
@@ -140,7 +140,7 @@ export function Navigation() {
             {/* Basic Usage */}
             <div id="usage" className="scroll-mt-20">
                 <h2 className="text-xl font-semibold text-white mb-4 tracking-tight">Basic Usage</h2>
-                <div className="bg-[#0a0a0a] border border-white/[0.08] rounded-lg overflow-hidden">
+                <div className="bg-[#0a0a0a] border border-white/8 rounded-lg overflow-hidden">
                     <div className="p-4 text-sm font-mono custom-scrollbar leading-relaxed" dangerouslySetInnerHTML={{ __html: basicCodeHtml }} />
                 </div>
             </div>
@@ -148,7 +148,7 @@ export function Navigation() {
             {/* Advanced Usage */}
             <div id="advanced" className="scroll-mt-20">
                 <h2 className="text-xl font-semibold text-white mb-4 tracking-tight">Advanced Usage</h2>
-                <div className="bg-[#0a0a0a] border border-white/[0.08] rounded-lg overflow-hidden">
+                <div className="bg-[#0a0a0a] border border-white/8 rounded-lg overflow-hidden">
                     <div className="p-4 text-sm font-mono custom-scrollbar leading-relaxed" dangerouslySetInnerHTML={{ __html: advancedCodeHtml }} />
                 </div>
             </div>
@@ -161,10 +161,10 @@ export function Navigation() {
                 <div className="space-y-6">
                     <div>
                         <h3 className="text-lg font-medium text-white mb-3">Options</h3>
-                        <div className="overflow-hidden border border-white/[0.08] rounded-xl bg-[#0a0a0a]">
+                        <div className="overflow-hidden border border-white/8 rounded-xl bg-[#0a0a0a]">
                             <div className="overflow-x-auto">
                                 <table className="w-full text-sm text-left border-collapse">
-                                    <thead className="text-xs text-white/50 uppercase bg-white/[0.02] border-b border-white/[0.08]">
+                                    <thead className="text-xs text-white/50 uppercase bg-white/2 border-b border-white/8">
                                         <tr>
                                             <th className="px-6 py-4 font-medium">Property</th>
                                             <th className="px-6 py-4 font-medium">Type</th>
@@ -172,10 +172,10 @@ export function Navigation() {
                                             <th className="px-6 py-4 font-medium">Description</th>
                                         </tr>
                                     </thead>
-                                    <tbody className="divide-y divide-white/[0.08]">
-                                        <tr className="group hover:bg-white/[0.02] transition-colors">
+                                    <tbody className="divide-y divide-white/8">
+                                        <tr className="group hover:bg-white/2 transition-colors">
                                             <td className="px-6 py-4">
-                                                <code className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06]">
+                                                <code className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/6">
                                                     duration
                                                 </code>
                                             </td>
@@ -189,9 +189,9 @@ export function Navigation() {
                                                 Animation duration in milliseconds. Automatically set to 0 if user has reduced motion enabled.
                                             </td>
                                         </tr>
-                                        <tr className="group hover:bg-white/[0.02] transition-colors">
+                                        <tr className="group hover:bg-white/2 transition-colors">
                                             <td className="px-6 py-4">
-                                                <code className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06]">
+                                                <code className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/6">
                                                     offset
                                                 </code>
                                             </td>
@@ -205,9 +205,9 @@ export function Navigation() {
                                                 Offset in pixels from the top. Useful for fixed/sticky headers. Positive values scroll higher, negative values scroll lower.
                                             </td>
                                         </tr>
-                                        <tr className="group hover:bg-white/[0.02] transition-colors">
+                                        <tr className="group hover:bg-white/2 transition-colors">
                                             <td className="px-6 py-4">
-                                                <code className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06]">
+                                                <code className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/6">
                                                     easing
                                                 </code>
                                             </td>
@@ -230,17 +230,17 @@ export function Navigation() {
                     {/* Easing Types */}
                     <div>
                         <h3 className="text-lg font-medium text-white mb-3">Easing Types</h3>
-                        <div className="overflow-hidden border border-white/[0.08] rounded-xl bg-[#0a0a0a]">
+                        <div className="overflow-hidden border border-white/8 rounded-xl bg-[#0a0a0a]">
                             <div className="overflow-x-auto">
                                 <table className="w-full text-sm text-left border-collapse">
-                                    <thead className="text-xs text-white/50 uppercase bg-white/[0.02] border-b border-white/[0.08]">
+                                    <thead className="text-xs text-white/50 uppercase bg-white/2 border-b border-white/8">
                                         <tr>
                                             <th className="px-6 py-4 font-medium">Value</th>
                                             <th className="px-6 py-4 font-medium">Description</th>
                                         </tr>
                                     </thead>
-                                    <tbody className="divide-y divide-white/[0.08]">
-                                        <tr className="group hover:bg-white/[0.02] transition-colors">
+                                    <tbody className="divide-y divide-white/8">
+                                        <tr className="group hover:bg-white/2 transition-colors">
                                             <td className="px-6 py-4">
                                                 <code className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06]">
                                                     'linear'
@@ -250,7 +250,7 @@ export function Navigation() {
                                                 Constant speed throughout the animation
                                             </td>
                                         </tr>
-                                        <tr className="group hover:bg-white/[0.02] transition-colors">
+                                        <tr className="group hover:bg-white/2 transition-colors">
                                             <td className="px-6 py-4">
                                                 <code className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06]">
                                                     'ease-in'
@@ -260,7 +260,7 @@ export function Navigation() {
                                                 Slow start, fast end
                                             </td>
                                         </tr>
-                                        <tr className="group hover:bg-white/[0.02] transition-colors">
+                                        <tr className="group hover:bg-white/2 transition-colors">
                                             <td className="px-6 py-4">
                                                 <code className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06]">
                                                     'ease-out'
@@ -270,7 +270,7 @@ export function Navigation() {
                                                 Fast start, slow end
                                             </td>
                                         </tr>
-                                        <tr className="group hover:bg-white/[0.02] transition-colors">
+                                        <tr className="group hover:bg-white/2 transition-colors">
                                             <td className="px-6 py-4">
                                                 <code className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06]">
                                                     'ease-in-out'
@@ -280,7 +280,7 @@ export function Navigation() {
                                                 Slow start and end, fast middle
                                             </td>
                                         </tr>
-                                        <tr className="group hover:bg-white/[0.02] transition-colors">
+                                        <tr className="group hover:bg-white/2 transition-colors">
                                             <td className="px-6 py-4">
                                                 <code className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06]">
                                                     'spring'
@@ -290,7 +290,7 @@ export function Navigation() {
                                                 Spring physics with bounce effect
                                             </td>
                                         </tr>
-                                        <tr className="group hover:bg-white/[0.02] transition-colors">
+                                        <tr className="group hover:bg-white/2 transition-colors">
                                             <td className="px-6 py-4">
                                                 <code className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06]">
                                                     'smooth-spring'
@@ -300,7 +300,7 @@ export function Navigation() {
                                                 Gentler spring without overshoot
                                             </td>
                                         </tr>
-                                        <tr className="group hover:bg-white/[0.02] transition-colors">
+                                        <tr className="group hover:bg-white/2 transition-colors">
                                             <td className="px-6 py-4">
                                                 <code className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06]">
                                                     'premium'
@@ -310,7 +310,7 @@ export function Navigation() {
                                                 Premium signature cubic-bezier(0.16, 1, 0.3, 1) - buttery smooth
                                             </td>
                                         </tr>
-                                        <tr className="group hover:bg-white/[0.02] transition-colors">
+                                        <tr className="group hover:bg-white/2 transition-colors">
                                             <td className="px-6 py-4">
                                                 <code className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#ffffff08] text-[#e0e0e0] border border-white/[0.06]">
                                                     'bounce'
@@ -339,7 +339,7 @@ export function Navigation() {
                     {/* Return Value */}
                     <div>
                         <h3 className="text-lg font-medium text-white mb-3">Return Value</h3>
-                        <div className="bg-[#0a0a0a] border border-white/[0.08] rounded-lg p-6">
+                        <div className="bg-[#0a0a0a] border border-white/8 rounded-lg p-6">
                             <div className="space-y-3">
                                 <div>
                                     <code className="text-[#00ff88] text-sm font-mono">
